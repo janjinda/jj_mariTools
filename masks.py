@@ -1,3 +1,5 @@
+import mari
+
 def maskHideAll():
     layer = mari.geo.current().currentChannel().currentLayer()
 
