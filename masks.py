@@ -1,9 +1,11 @@
 import mari
+import os
+
 
 def maskHideAll():
     layer = mari.geo.current().currentChannel().currentLayer()
 
-    if layer.hasMask() == True:
+    if layer.hasMask():
         pass
 
     else:
@@ -17,3 +19,10 @@ def maskHideAll():
         for image in imageSet:
             image.fill(black)
 
+
+maskHideAllAction = mari.actions.create("jj_mariTools/Mask Hide All", "masks.maskHideAll()")
+
+icon_filename = 'Hide.png'
+icon_path = mari.resources.path(mari.resources.ICONS) + os.sep +  icon_filename
+maskHideAllAction.setIconPath(icon_path)
+maskHideAllAction.setIconPath(icon_path)
